@@ -27,7 +27,7 @@ get_miner_stats() {
     stats=$(jq -nc \
             --argjson hash "$(echo "${hash[@]}" | tr " " "\n" | jq -cs '.')" \
             --arg busid "cpu" \
-            --arg units "khs" \
+            --arg units "mhs" \
             --arg ac "$acc" --arg inv "0" --arg rj "0" \
             --arg miner_version "$EXTERNAL_VERSION" \
             --arg miner_name "$EXTERNAL_NAME" \
