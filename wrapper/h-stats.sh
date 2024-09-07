@@ -52,7 +52,7 @@ rj=0
 ver="custom"
 algo="spectrex"
 cpu_temp=$(/hive/sbin/cpu-temp)
-hs_units="khs"
+hs_units="mhs"
 
 # Construct JSON stats
 stats=$(jq -nc \
