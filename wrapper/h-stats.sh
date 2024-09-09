@@ -37,22 +37,22 @@ get_uptime(){
 uptime=$(get_uptime)
 
 # Extract the most recent total khs value from the log
-total_khs=$(grep -oP "hashrate is: \K\d+.\d+" <<< "$log" | tail -n1)
+total_khs=$(grep -oP "hashrate is \K\d+.\d+" <<< "$log" | tail -n1)
 if [[ -z $total_khs ]]; then
   total_khs=0
 fi
 
 # Count the number of blocks submitted successfully
-ac=$(grep -coP "Block submitted successfully!" <<< "$log")
+ac=$(grep -coP "block submitted successfully!" <<< "$log")
 if [[ -z $ac ]]; then
   ac=0
 fi
 
 rj=0
 ver="custom"
-algo="spectrex"
+algo="kheavyhash"
 cpu_temp=$(/hive/sbin/cpu-temp)
-hs_units="mhs"
+hs_units="ghs"
 
 # Construct JSON stats
 stats=$(jq -nc \
