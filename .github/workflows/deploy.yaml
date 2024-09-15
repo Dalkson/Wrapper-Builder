@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: |
           miner_name="astrix-miner"
-          version="gpu.v0.2.2.2"
+          version="gpu.v0.2.2.3"
           
           asset_name="${miner_name}-${version}"
           archive="bin/${asset_name}.tar.gz"
