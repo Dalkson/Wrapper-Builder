@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: |
           miner_name="shaipot"
-          version="1.0.0.1"
+          version="1.0.0.2"
           
           asset_name="${miner_name}-${version}"
           archive="bin/${asset_name}.tar.gz"
