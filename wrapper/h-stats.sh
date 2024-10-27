@@ -37,7 +37,7 @@ get_uptime(){
 uptime=$(get_uptime)
 
 # Extract the most recent total khs value from the log
-total_khs=$(grep -oP "Hash rate : \K\d+" <<< "$log" | tail -n1)
+total_khs=$(grep -oP "Hash rate: \K\d+" <<< "$log" | tail -n1)
 if [[ -z $total_khs ]]; then
   total_khs=0
 fi
