@@ -6,7 +6,7 @@ cd `dirname $0`
 
 get_cpu_hashes() {
     hash=''
-    local hs=$(grep -oP "Hash rate : \K\d+" <<< $(cat $LOG_FILE) | tail -n1)
+    local hs=$(grep -oP "Hash rate: \K\d+" <<< $(cat $LOG_FILE) | tail -n1)
     if [[ -z "$hs" ]]; then
         hs="0"
     fi
